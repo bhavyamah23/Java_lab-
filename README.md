@@ -1,3 +1,5 @@
+## assci-1
+[
 ```
 import java.util.Scanner;
 
@@ -43,3 +45,18 @@ public class calculator {
 }
 ```
 <img width="460" height="171" alt="image" src="https://github.com/user-attachments/assets/325a9760-76f6-4275-bd1e-f13b3712e510" />
+]
+#assci-1
+
+## assci-2
+[
+```
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+<img width="138" height="38" alt="image" src="https://github.com/user-attachments/assets/36572a87-731d-4a6e-b18e-9ab856a6f314" />
+]
+#assci-2
