@@ -227,8 +227,6 @@ class Fibonacci {
     }
 }
 ```
-<img width="263" height="17" alt="Screenshot 2026-03-12 223838" src="https://github.com/user-attachments/assets/c423bab2-b00b-40a5-99eb-3c98c21fdd1b" />
+<img width="263" height="17" alt="Screenshot 2026-03-12 223838" src="https://github.com/user-attachments/assets/dc8b3946-4e71-4dde-bb59-e107dccfe802" />
 ]
 #assci-7
-
-
