@@ -1,6 +1,8 @@
 [program-1 for calculator ](#code1)
 [program-2 for HelloWorld ](#code2)
 [program-3 for Armstrong ](#code3)
+[program-4 for Distance1 ](#code4)
+[program-5 for Distance2 ](#code5)
 ## assci-1
 [
 ```
@@ -97,3 +99,84 @@ class Armstrong {
 <img width="114" height="28" alt="Screenshot 2026-03-12 222509" src="https://github.com/user-attachments/assets/8bbb59fc-5c65-41f9-a639-ee9f5c2a2792" />
 ]
 #assci-3
+
+##assci-4
+[
+```
+class Distance1 {
+    int km, m, cm;
+
+    void input(int km, int m, int cm) {
+        this.km = km;
+        this.m = m;
+        this.cm = cm;
+    }
+
+    void add(Distance1 d1, Distance1 d2) {
+        cm = d1.cm + d2.cm;
+        m = d1.m + d2.m + cm / 100;
+        cm = cm % 100;
+        km = d1.km + d2.km + m / 1000;
+        m = m % 1000;
+    }
+
+    void display() {
+        System.out.println(km + " km " + m + " m " + cm + " cm");
+    }
+
+    public static void main(String[] args) {
+        Distance1 d1 = new Distance1();
+        Distance1 d2 = new Distance1();
+        Distance1 result = new Distance1();
+
+        d1.input(2, 500, 50);
+        d2.input(1, 800, 70);
+
+        result.add(d1, d2);
+        result.display();
+    }
+}
+```
+<img width="187" height="21" alt="Screenshot 2026-03-12 223136" src="https://github.com/user-attachments/assets/46a06249-74b6-4b58-902c-7b7cfd1c9897" />
+]
+#assci-4
+
+##assci-5
+[
+```
+class Distance2 {
+    int m, cm;
+
+    void input(int m, int cm) {
+        this.m = m;
+        this.cm = cm;
+    }
+
+    void add(Distance2 d1, Distance2 d2) {
+        cm = d1.cm + d2.cm;
+        m = d1.m + d2.m + cm / 100;
+        cm = cm % 100;
+    }
+
+    void display() {
+        System.out.println(m + " meter " + cm + " cm");
+    }
+
+    public static void main(String args[]) {
+
+        Distance2 d1 = new Distance2();
+        Distance2 d2 = new Distance2();
+        Distance2 result = new Distance2();
+
+        d1.input(5, 80);
+        d2.input(3, 40);
+
+        result.add(d1, d2);
+        result.display();
+    }
+}
+```
+<img width="164" height="26" alt="image" src="https://github.com/user-attachments/assets/8e302576-fba7-45d5-a372-e72b2facd3fa" />
+]
+#assci-5
+
