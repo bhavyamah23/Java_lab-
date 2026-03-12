@@ -68,7 +68,7 @@ public class HelloWorld {
 ]
 #assci-2
 
-##assci-3
+## assci-3
 [
 ```
 class Armstrong {
@@ -102,7 +102,7 @@ class Armstrong {
 ]
 #assci-3
 
-##assci-4
+## assci-4
 [
 ```
 class Distance1 {
@@ -143,7 +143,7 @@ class Distance1 {
 ]
 #assci-4
 
-##assci-5
+## assci-5
 [
 ```
 class Distance2 {
@@ -182,7 +182,7 @@ class Distance2 {
 ]
 #assci-5
 
-##assci-6
+## assci-6
 [
 ```
 class Factorial {
@@ -205,7 +205,7 @@ class Factorial {
 <img width="179" height="23" alt="Screenshot 2026-03-12 223710" src="https://github.com/user-attachments/assets/8ed3b4d5-4fdb-466c-8a8f-46a77e3f6d63" />
 ]
 #assci-6
-##assci-7
+## assci-7
 [
 ```
 class Fibonacci {
