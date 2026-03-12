@@ -206,6 +206,7 @@ class Factorial {
 <img width="179" height="23" alt="Screenshot 2026-03-12 223710" src="https://github.com/user-attachments/assets/8ed3b4d5-4fdb-466c-8a8f-46a77e3f6d63" />
 ]
 #assci-6
+
 ## assci-7
 [
 ```
