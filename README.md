@@ -4,7 +4,6 @@
 [program-4 for Distance1 ](#code4)
 [program-5 for Distance2 ](#code5)
 [program-6 for Factorial ](#code6)
-[program-7 for Fibonacci ](#code7)
 ## assci-1
 [
 ```
@@ -205,28 +204,3 @@ class Factorial {
 <img width="179" height="23" alt="Screenshot 2026-03-12 223710" src="https://github.com/user-attachments/assets/8ed3b4d5-4fdb-466c-8a8f-46a77e3f6d63" />
 ]
 #assci-6
-## assci-7
-[
-```
-class Fibonacci {
-
-    void series(int n) {
-        int a = 0, b = 1;
-
-        for(int i = 1; i <= n; i++) {
-            System.out.print(a + " ");
-            int c = a + b;
-            a = b;
-            b = c;
-        }
-    }
-
-    public static void main(String args[]) {
-        Fibonacci obj = new Fibonacci();
-        obj.series(10);
-    }
-}
-```
-<img width="263" height="17" alt="Screenshot 2026-03-12 223838" src="https://github.com/user-attachments/assets/dc8b3946-4e71-4dde-bb59-e107dccfe802" />
-]
-#assci-7
