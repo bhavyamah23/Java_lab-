@@ -15,7 +15,7 @@
 [program-15 for MultilevelInheritanceDemo ](#code15)
 [program-16 for HierarchicalInheritanceDemo ](#code16)
 ## assci-1
-[
+
 ```
 import java.util.Scanner;
 
@@ -61,8 +61,6 @@ public class calculator {
 }
 ```
 <img width="460" height="171" alt="image" src="https://github.com/user-attachments/assets/325a9760-76f6-4275-bd1e-f13b3712e510" />
-]
-#assci-1
 
 ## assci-2
 
@@ -77,7 +75,6 @@ public class HelloWorld {
 
 
 ## assci-3
-[
 ```
 class Armstrong {
    Armstrong() {
@@ -107,11 +104,8 @@ class Armstrong {
 }
 ```
 <img width="114" height="28" alt="Screenshot 2026-03-12 222509" src="https://github.com/user-attachments/assets/8bbb59fc-5c65-41f9-a639-ee9f5c2a2792" />
-]
-#assci-3
 
 ## assci-4
-[
 ```
 class Distance1 {
     int km, m, cm;
@@ -148,11 +142,8 @@ class Distance1 {
 }
 ```
 <img width="187" height="21" alt="Screenshot 2026-03-12 223136" src="https://github.com/user-attachments/assets/46a06249-74b6-4b58-902c-7b7cfd1c9897" />
-]
-#assci-4
 
 ## assci-5
-[
 ```
 class Distance2 {
     int m, cm;
@@ -187,11 +178,8 @@ class Distance2 {
 }
 ```
 <img width="164" height="26" alt="image" src="https://github.com/user-attachments/assets/8e302576-fba7-45d5-a372-e72b2facd3fa" />
-]
-#assci-5
 
 ## assci-6
-[
 ```
 class Factorial {
     void fact(int n) {
@@ -211,11 +199,8 @@ class Factorial {
 }
 ```
 <img width="179" height="23" alt="Screenshot 2026-03-12 223710" src="https://github.com/user-attachments/assets/8ed3b4d5-4fdb-466c-8a8f-46a77e3f6d63" />
-]
-#assci-6
 
 ## assci-7
-[
 ```
 class Fibonacci {
 
@@ -237,8 +222,6 @@ class Fibonacci {
 }
 ```
 <img width="262" height="17" alt="Screenshot 2026-03-12 225430" src="https://github.com/user-attachments/assets/3e00c7ee-2827-4e2f-9fd3-98b93fa2c2c3" />
-]
-#assci-7
 
 ## assci-8
 [
@@ -332,11 +315,8 @@ public class Main {
 }
 ```
 <img width="314" height="494" alt="image" src="https://github.com/user-attachments/assets/d92a6697-bf11-44d2-b69b-2eb284999eac" />
-]
-#assci-8
 
 ## assci-9
-[
 ```
 class Palindrome {
 
@@ -362,11 +342,8 @@ class Palindrome {
 }
 ```
 <img width="126" height="27" alt="Screenshot 2026-03-12 230028" src="https://github.com/user-attachments/assets/cf2f438c-df8b-434c-9251-eb6c7c2a4124" />
-]
-#assci-9
 
 ## asssci-10
-[
 ```
 class Pattern {
 
@@ -387,11 +364,8 @@ class Pattern {
 }
 ```
 <img width="120" height="126" alt="Screenshot 2026-03-12 230649" src="https://github.com/user-attachments/assets/c26865c0-486f-42cc-833e-d16f52423f8a" />
-]
-#assci-10
 
 ## assci-11
-[
 ```
 class ReverseArray {
     void reverse(int arr[]) {
@@ -407,11 +381,8 @@ class ReverseArray {
 }
 ```
 <img width="166" height="24" alt="Screenshot 2026-03-12 231132" src="https://github.com/user-attachments/assets/3848e00c-3ab4-4a1c-86f9-8e4faf9b9032" />
-]
-#assci-11
 
 ##assci-12
-[
 ```
 class Time1 {
     int hr, min, sec;
@@ -448,11 +419,8 @@ class Time1 {
 }
 ```
 <img width="220" height="21" alt="Screenshot 2026-03-12 231640" src="https://github.com/user-attachments/assets/04ed1b1f-9e34-4fc4-b07a-75cf8db89e32" />
-]
-#assci-12
 
 ## assci-13
-[
 ```
 class Time2 {
     int hr, min;
@@ -487,11 +455,8 @@ class Time2 {
 }
 ```
 <img width="199" height="21" alt="Screenshot 2026-03-12 232235" src="https://github.com/user-attachments/assets/a5465b3c-a719-4518-a0c2-ea3b0eb0cec1" />
-]
-#assci-13
 
 ## assci-14
-[
 ```
 class Animal1 {
     void eat() {
@@ -514,11 +479,8 @@ public class SingleInheritanceDemo {
 }
 ```
 <img width="199" height="44" alt="Screenshot 2026-03-12 233147" src="https://github.com/user-attachments/assets/d0b9156c-94db-4b51-952a-76904d177d93" />
-]
-#assci-14
 
 ## assci-15
-[
 ```
 class Animal2 {
     void eat() {
@@ -548,11 +510,8 @@ public class MultilevelInheritanceDemo {
 }
 ```
 <img width="193" height="83" alt="Screenshot 2026-03-12 233611" src="https://github.com/user-attachments/assets/5421b7e0-4c73-4ed6-bb50-ab04e50ab0ca" />
-]
-#assci-15
 
 ## assci-16
-[
 ```
 class Animal3 {
     void eat() {
@@ -586,5 +545,3 @@ public class HierarchicalInheritanceDemo {
 }
 ```
 <img width="136" height="105" alt="Screenshot 2026-03-12 233911" src="https://github.com/user-attachments/assets/8237048e-e645-4f68-bd53-e76c6e939231" />
-]
-#assci-16
