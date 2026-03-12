@@ -65,7 +65,7 @@ public class calculator {
 #assci-1
 
 ## assci-2
-[
+
 ```
 public class HelloWorld {
     public static void main(String[] args) {
@@ -74,8 +74,7 @@ public class HelloWorld {
 }
 ```
 <img width="138" height="38" alt="image" src="https://github.com/user-attachments/assets/36572a87-731d-4a6e-b18e-9ab856a6f314" />
-]
-#assci-2
+
 
 ## assci-3
 [
