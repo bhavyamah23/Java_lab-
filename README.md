@@ -8,6 +8,7 @@
 [program-8 for Main ](#code8)
 [program-9 for Palindrome ](#code9)
 [program-10 for Pattern ](#code10)
+[program-11 for ReverseArray ](#code11)
 
 
 ## assci-1
@@ -59,7 +60,7 @@ public class calculator {
 <img width="460" height="171" alt="image" src="https://github.com/user-attachments/assets/325a9760-76f6-4275-bd1e-f13b3712e510" />
 ]
 
-#assci-1
+## assci-1
 
 ## assci-2
 [
@@ -73,7 +74,7 @@ public class HelloWorld {
 <img width="138" height="38" alt="image" src="https://github.com/user-attachments/assets/36572a87-731d-4a6e-b18e-9ab856a6f314" />
 ]
 
-#assci-2
+## assci-2
 
 ## assci-3
 [
@@ -108,7 +109,7 @@ class Armstrong {
 <img width="114" height="28" alt="Screenshot 2026-03-12 222509" src="https://github.com/user-attachments/assets/8bbb59fc-5c65-41f9-a639-ee9f5c2a2792" />
 ]
 
-#assci-3
+## assci-3
 
 ## assci-4
 [
@@ -150,7 +151,7 @@ class Distance1 {
 <img width="187" height="21" alt="Screenshot 2026-03-12 223136" src="https://github.com/user-attachments/assets/46a06249-74b6-4b58-902c-7b7cfd1c9897" />
 ]
 
-#assci-4
+## assci-4
 
 ## assci-5
 [
@@ -190,7 +191,7 @@ class Distance2 {
 <img width="164" height="26" alt="image" src="https://github.com/user-attachments/assets/8e302576-fba7-45d5-a372-e72b2facd3fa" />
 ]
 
-#assci-5
+## assci-5
 
 ## assci-6
 [
@@ -215,7 +216,7 @@ class Factorial {
 <img width="179" height="23" alt="Screenshot 2026-03-12 223710" src="https://github.com/user-attachments/assets/8ed3b4d5-4fdb-466c-8a8f-46a77e3f6d63" />
 ]
 
-#assci-6
+## assci-6
 
 ## assci-7
 [
@@ -242,7 +243,7 @@ class Fibonacci {
 <img width="262" height="17" alt="Screenshot 2026-03-12 225430" src="https://github.com/user-attachments/assets/3e00c7ee-2827-4e2f-9fd3-98b93fa2c2c3" />
 ]
 
-#assci-7
+## assci-7
 
 ## assci-8
 [
@@ -338,7 +339,7 @@ public class Main {
 <img width="314" height="494" alt="image" src="https://github.com/user-attachments/assets/d92a6697-bf11-44d2-b69b-2eb284999eac" />
 ]
 
-#assci-8
+##  assci-8
 
 ## assci-9
 [
@@ -369,7 +370,7 @@ class Palindrome {
 <img width="126" height="27" alt="Screenshot 2026-03-12 230028" src="https://github.com/user-attachments/assets/cf2f438c-df8b-434c-9251-eb6c7c2a4124" />
 ]
 
-#assci-9
+## assci-9
 
 ## asssci-10
 [
@@ -395,4 +396,24 @@ class Pattern {
 <img width="120" height="126" alt="Screenshot 2026-03-12 230649" src="https://github.com/user-attachments/assets/c26865c0-486f-42cc-833e-d16f52423f8a" />
 ]
 
-#assci-10
+## assci-10
+
+## assci-11
+[
+```
+class ReverseArray {
+    void reverse(int arr[]) {
+        for (int i = arr.length - 1; i >= 0; i--)
+            System.out.print(arr[i] + " ");
+    }
+
+    public static void main(String[] args) {
+        ReverseArray obj = new ReverseArray();
+        int a[] = {10, 20, 30, 40, 50};
+        obj.reverse(a);
+    }
+}
+```
+<img width="166" height="24" alt="Screenshot 2026-03-12 231132" src="https://github.com/user-attachments/assets/3848e00c-3ab4-4a1c-86f9-8e4faf9b9032" />
+]
+## assci-11
