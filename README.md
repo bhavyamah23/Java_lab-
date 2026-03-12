@@ -5,6 +5,8 @@
 [program-5 for Distance2 ](#code5)
 [program-6 for Factorial ](#code6)
 [program-7 for Fibonacci ](#code7)
+[program-8 for Main ](#code8)
+[program-9 for Palindrome ](#code9)
 
 ## assci-1
 [
@@ -232,3 +234,128 @@ class Fibonacci {
 <img width="262" height="17" alt="Screenshot 2026-03-12 225430" src="https://github.com/user-attachments/assets/3e00c7ee-2827-4e2f-9fd3-98b93fa2c2c3" />
 ]
 #assci-7
+
+## assci-8
+[
+```
+class Matrix {
+    int a[][] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+
+    int b[][] = {
+        {1,1,1},
+        {1,1,1},
+        {1,1,1}
+    };
+
+    int c[][] = new int[3][3];
+
+    void sum() {
+        System.out.println("Sum of matrices:");
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                c[i][j] = a[i][j] + b[i][j];
+                System.out.print(c[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    void multiply() {
+        System.out.println("Multiplication of matrices:");
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++){
+                c[i][j] = 0;
+                for(int k=0;k<3;k++)
+                    c[i][j] += a[i][k] * b[k][j];
+                System.out.print(c[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    void transpose() {
+        System.out.println("Transpose:");
+        for(int i=0;i<3;i++){
+            for(int j=0;j<3;j++)
+                System.out.print(a[j][i] + " ");
+            System.out.println();
+        }
+    }
+
+    void rowSum() {
+        for(int i=0;i<3;i++){
+            int sum=0;
+            for(int j=0;j<3;j++)
+                sum += a[i][j];
+            System.out.println("Row " + i + " sum = " + sum);
+        }
+    }
+
+    void columnSum() {
+        for(int j=0;j<3;j++){
+            int sum=0;
+            for(int i=0;i<3;i++)
+                sum += a[i][j];
+            System.out.println("Column " + j + " sum = " + sum);
+        }
+    }
+
+    void diagonalSum() {
+        int sum=0;
+        for(int i=0;i<3;i++)
+            sum += a[i][i];
+        System.out.println("Diagonal sum = " + sum);
+    }
+}
+
+public class Main {
+    public static void main(String args[]) {
+
+        Matrix obj = new Matrix();   // object creation
+
+        obj.sum();
+        obj.multiply();
+        obj.transpose();
+        obj.rowSum();
+        obj.columnSum();
+        obj.diagonalSum();
+    }
+}
+```
+<img width="314" height="494" alt="image" src="https://github.com/user-attachments/assets/d92a6697-bf11-44d2-b69b-2eb284999eac" />
+]
+#assci-8
+
+## assci-9
+[
+```
+class Palindrome {
+
+    void check(int n) {
+        int rev = 0, r, temp = n;
+
+        while(n > 0) {
+            r = n % 10;
+            rev = rev * 10 + r;
+            n = n / 10;
+        }
+
+        if(temp == rev)
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not Palindrome");
+    }
+
+    public static void main(String args[]) {
+        Palindrome obj = new Palindrome();
+        obj.check(121);
+    }
+}
+```
+<img width="126" height="27" alt="Screenshot 2026-03-12 230028" src="https://github.com/user-attachments/assets/cf2f438c-df8b-434c-9251-eb6c7c2a4124" />
+]
+#assci-9
