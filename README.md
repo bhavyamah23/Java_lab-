@@ -11,6 +11,7 @@
 [program-11 for ReverseArray ](#code11)
 [program-12 for Time1 ](#code12)
 [program-13 for Time2 ](#code13)
+[program-14 for SingleInheritanceDemo ](#code14)
 
 ## assci-1
 [
@@ -488,3 +489,30 @@ class Time2 {
 <img width="199" height="21" alt="Screenshot 2026-03-12 232235" src="https://github.com/user-attachments/assets/a5465b3c-a719-4518-a0c2-ea3b0eb0cec1" />
 ]
 #assci-13
+
+## assci-14
+[
+```
+class Animal1 {
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+}
+
+class Dog1 extends Animal1 {
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+public class SingleInheritanceDemo {
+    public static void main(String[] args) {
+        Dog1 obj = new Dog1();
+        obj.eat();
+        obj.bark();
+    }
+}
+```
+<img width="199" height="44" alt="Screenshot 2026-03-12 233147" src="https://github.com/user-attachments/assets/d0b9156c-94db-4b51-952a-76904d177d93" />
+]
+#assci-14
