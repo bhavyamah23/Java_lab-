@@ -12,7 +12,8 @@
 [program-12 for Time1 ](#code12)
 [program-13 for Time2 ](#code13)
 [program-14 for SingleInheritanceDemo ](#code14)
-
+[program-15 for MultilevelInheritanceDemo ](#code15)
+[program-16 for HierarchicalInheritanceDemo ](#code16)
 ## assci-1
 [
 ```
@@ -516,3 +517,75 @@ public class SingleInheritanceDemo {
 <img width="199" height="44" alt="Screenshot 2026-03-12 233147" src="https://github.com/user-attachments/assets/d0b9156c-94db-4b51-952a-76904d177d93" />
 ]
 #assci-14
+
+## assci-15
+[
+```
+class Animal2 {
+    void eat() {
+        System.out.println("Animal eats food");
+    }
+}
+
+class Dog2 extends Animal2 {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Puppy2 extends Dog2 {
+    void weep() {
+        System.out.println("Puppy weeps");
+    }
+}
+
+public class MultilevelInheritanceDemo {
+    public static void main(String[] args) {
+        Puppy2 obj = new Puppy2();
+        obj.eat();
+        obj.bark();
+        obj.weep();
+    }
+}
+```
+<img width="193" height="83" alt="Screenshot 2026-03-12 233611" src="https://github.com/user-attachments/assets/5421b7e0-4c73-4ed6-bb50-ab04e50ab0ca" />
+]
+#assci-15
+
+## assci-16
+[
+```
+class Animal3 {
+    void eat() {
+        System.out.println("Animal eats");
+    }
+}
+
+class Dog3 extends Animal3 {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat3 extends Animal3 {
+    void meow() {
+        System.out.println("Cat meows");
+    }
+}
+
+public class HierarchicalInheritanceDemo {
+    public static void main(String[] args) {
+        Dog3 d = new Dog3();
+        Cat3 c = new Cat3();
+
+        d.eat();
+        d.bark();
+
+        c.eat();
+        c.meow();
+    }
+}
+```
+<img width="136" height="105" alt="Screenshot 2026-03-12 233911" src="https://github.com/user-attachments/assets/8237048e-e645-4f68-bd53-e76c6e939231" />
+]
+#assci-16
