@@ -26,6 +26,8 @@
 [program-26 for PaintBrush ](#code26)
 [program-27 for TestPackage ](#code27)
 [program-28 for TestPackage ](#code28)
+[program-29 for ExceptionDemo ](#code29)
+[program-30 for AgeTest ](#code30)
 ## assci-1
 
 ```
@@ -159,31 +161,24 @@ class Distance1 {
 ```
 class Distance2 {
     int m, cm;
-
     void input(int m, int cm) {
         this.m = m;
         this.cm = cm;
     }
-
     void add(Distance2 d1, Distance2 d2) {
         cm = d1.cm + d2.cm;
         m = d1.m + d2.m + cm / 100;
         cm = cm % 100;
     }
-
     void display() {
         System.out.println(m + " meter " + cm + " cm");
     }
-
     public static void main(String args[]) {
-
         Distance2 d1 = new Distance2();
         Distance2 d2 = new Distance2();
         Distance2 result = new Distance2();
-
         d1.input(5, 80);
         d2.input(3, 40);
-
         result.add(d1, d2);
         result.display();
     }
@@ -558,7 +553,7 @@ public class HierarchicalInheritanceDemo {
 ```
 <img width="136" height="105" alt="Screenshot 2026-03-12 233911" src="https://github.com/user-attachments/assets/8237048e-e645-4f68-bd53-e76c6e939231" />
 
-##assci-17
+## assci-17
 ```
 import java.io.*;
 public class CharFileCopy {
@@ -581,7 +576,7 @@ public class CharFileCopy {
 ```
 <img width="193" height="12" alt="image" src="https://github.com/user-attachments/assets/5527a848-4fe8-433e-96c8-0810663c527b" />
 
-##assci-18
+## assci-18
 ```
 import java.io.*;
 
@@ -609,7 +604,7 @@ public class ByteFileCopy {
 ```
 <img width="167" height="13" alt="image" src="https://github.com/user-attachments/assets/f7442230-8f2d-4e77-a6b5-fc64be7f143f" />
 
-##assci-19
+## assci-19
 ```
 class A extends Thread implements Runnable {
     public void run() {
@@ -682,7 +677,7 @@ public class CombinedProgram {
 ```
 <img width="139" height="401" alt="image" src="https://github.com/user-attachments/assets/a0df1c20-fa98-4c39-baa7-d4bdbe4924f3" />
 
-##assci-20
+## assci-20
 ```
 class A extends Thread {
     public void run() {
@@ -717,7 +712,7 @@ public class JoinExample {
 ```
 <img width="39" height="194" alt="image" src="https://github.com/user-attachments/assets/6c5f2fe2-a6cb-4180-ba5d-a550be26faa7" />
 
-##assci-21
+## assci-21
 ```
 import javax.swing.*;
 import java.awt.event.*;
@@ -758,17 +753,13 @@ public class AddSwing {
 ```
 <img width="242" height="211" alt="image" src="https://github.com/user-attachments/assets/737be681-57c5-4e72-b1ff-21c05656523b" />
 
-##assci-22
+## assci-22
 ```
 import javax.swing.*;
 import java.awt.event.*;
-
 public class RegisterForm {
     public static void main(String[] args) {
-
         JFrame f = new JFrame("Registration Form");
-
-        // Labels
         JLabel l1 = new JLabel("Name:");
         JLabel l2 = new JLabel("Email:");
         JLabel l3 = new JLabel("Password:");
@@ -779,38 +770,24 @@ public class RegisterForm {
         JLabel l8 = new JLabel("Course:");
         JLabel l9 = new JLabel("Hobbies:");
         JLabel l10 = new JLabel("Country:");
-
-        // TextFields
         JTextField t1 = new JTextField();
         JTextField t2 = new JTextField();
         JPasswordField t3 = new JPasswordField();
         JTextField t5 = new JTextField();
         JTextField t6 = new JTextField();
         JTextField t7 = new JTextField();
-
-        // Radio Buttons (Gender)
         JRadioButton r1 = new JRadioButton("Male");
         JRadioButton r2 = new JRadioButton("Female");
         ButtonGroup bg = new ButtonGroup();
         bg.add(r1); bg.add(r2);
-
-        // ComboBox (Course)
         String courses[] = {"B.Tech","BCA","MCA","MBA"};
         JComboBox c1 = new JComboBox(courses);
-
-        // CheckBoxes (Hobbies)
         JCheckBox h1 = new JCheckBox("Reading");
         JCheckBox h2 = new JCheckBox("Music");
         JCheckBox h3 = new JCheckBox("Sports");
-
-        // Country ComboBox
         String country[] = {"India","USA","UK","Canada"};
         JComboBox c2 = new JComboBox(country);
-
-        // Button
         JButton b = new JButton("Submit");
-
-        // Set Bounds
         l1.setBounds(50,30,100,30);   t1.setBounds(150,30,150,30);
         l2.setBounds(50,70,100,30);   t2.setBounds(150,70,150,30);
         l3.setBounds(50,110,100,30);  t3.setBounds(150,110,150,30);
@@ -821,10 +798,7 @@ public class RegisterForm {
         l8.setBounds(50,310,100,30);  c1.setBounds(150,310,150,30);
         l9.setBounds(50,350,100,30);  h1.setBounds(150,350,80,30); h2.setBounds(230,350,80,30); h3.setBounds(310,350,80,30);
         l10.setBounds(50,390,100,30); c2.setBounds(150,390,150,30);
-
         b.setBounds(150,440,100,30);
-
-        // Add components
         f.add(l1); f.add(t1);
         f.add(l2); f.add(t2);
         f.add(l3); f.add(t3);
@@ -836,14 +810,11 @@ public class RegisterForm {
         f.add(l9); f.add(h1); f.add(h2); f.add(h3);
         f.add(l10); f.add(c2);
         f.add(b);
-
-        // Button Action
         b.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JOptionPane.showMessageDialog(f, "Registration Successful");
             }
         });
-
         f.setSize(450,550);
         f.setLayout(null);
         f.setVisible(true);
@@ -852,72 +823,54 @@ public class RegisterForm {
 ```
 <img width="317" height="400" alt="image" src="https://github.com/user-attachments/assets/e07ca2aa-ebb4-4e25-9be6-40af4c6b314c" />
 
-##assci-23
+## assci-23
 ```
 import javax.swing.*;
 public class CalculatorSwing {
     public static void main(String[] args) {
-
         JFrame f = new JFrame("Calculator");
-
         JTextField t = new JTextField();
         t.setBounds(30,30,240,30);
-
-        // Buttons
         JButton b1 = new JButton("1");
         JButton b2 = new JButton("2");
         JButton b3 = new JButton("3");
         JButton b4 = new JButton("+");
-
         JButton b5 = new JButton("4");
         JButton b6 = new JButton("5");
         JButton b7 = new JButton("6");
         JButton b8 = new JButton("-");
-
         JButton b9 = new JButton("7");
         JButton b10 = new JButton("8");
         JButton b11 = new JButton("9");
         JButton b12 = new JButton("*");
-
         JButton b13 = new JButton("0");
         JButton b14 = new JButton("C");
         JButton b15 = new JButton("=");
         JButton b16 = new JButton("/");
-
-        // Set positions
         b1.setBounds(30,80,50,40);
         b2.setBounds(90,80,50,40);
         b3.setBounds(150,80,50,40);
         b4.setBounds(210,80,50,40);
-
         b5.setBounds(30,130,50,40);
         b6.setBounds(90,130,50,40);
         b7.setBounds(150,130,50,40);
         b8.setBounds(210,130,50,40);
-
         b9.setBounds(30,180,50,40);
         b10.setBounds(90,180,50,40);
         b11.setBounds(150,180,50,40);
         b12.setBounds(210,180,50,40);
-
         b13.setBounds(30,230,50,40);
         b14.setBounds(90,230,50,40);
         b15.setBounds(150,230,50,40);
         b16.setBounds(210,230,50,40);
-
-        // Add components
         f.add(t);
         f.add(b1); f.add(b2); f.add(b3); f.add(b4);
         f.add(b5); f.add(b6); f.add(b7); f.add(b8);
         f.add(b9); f.add(b10); f.add(b11); f.add(b12);
         f.add(b13); f.add(b14); f.add(b15); f.add(b16);
-
-        // Variables
         final int[] num1 = new int[1];
         final int[] num2 = new int[1];
         final char[] op = new char[1];
-
-        // Number buttons
         b1.addActionListener(e -> t.setText(t.getText() + "1"));
         b2.addActionListener(e -> t.setText(t.getText() + "2"));
         b3.addActionListener(e -> t.setText(t.getText() + "3"));
@@ -928,32 +881,22 @@ public class CalculatorSwing {
         b10.addActionListener(e -> t.setText(t.getText() + "8"));
         b11.addActionListener(e -> t.setText(t.getText() + "9"));
         b13.addActionListener(e -> t.setText(t.getText() + "0"));
-
-        // Operators
         b4.addActionListener(e -> { num1[0] = Integer.parseInt(t.getText()); op[0] = '+'; t.setText(""); });
         b8.addActionListener(e -> { num1[0] = Integer.parseInt(t.getText()); op[0] = '-'; t.setText(""); });
         b12.addActionListener(e -> { num1[0] = Integer.parseInt(t.getText()); op[0] = '*'; t.setText(""); });
         b16.addActionListener(e -> { num1[0] = Integer.parseInt(t.getText()); op[0] = '/'; t.setText(""); });
-
-        // Equal
         b15.addActionListener(e -> {
             num2[0] = Integer.parseInt(t.getText());
             int result = 0;
-
             switch(op[0]) {
                 case '+': result = num1[0] + num2[0]; break;
                 case '-': result = num1[0] - num2[0]; break;
                 case '*': result = num1[0] * num2[0]; break;
                 case '/': result = num1[0] / num2[0]; break;
             }
-
             t.setText(String.valueOf(result));
         });
-
-        // Clear
         b14.addActionListener(e -> t.setText(""));
-
-        // Frame settings
         f.setSize(320,350);
         f.setLayout(null);
         f.setVisible(true);
@@ -962,7 +905,7 @@ public class CalculatorSwing {
 ```
 <img width="219" height="246" alt="image" src="https://github.com/user-attachments/assets/67ce69e3-b31b-4747-a60a-557b73dddad9" />
 
-##assci-24
+##  assci-24
 ```
 import javax.swing.*;
 import java.awt.event.*;
@@ -1028,7 +971,7 @@ public class MatrixAddition {
 ```
 <img width="314" height="197" alt="image" src="https://github.com/user-attachments/assets/f18c39d7-4dd8-469f-850d-25e526dc1b94" />
 
-##assci-25
+## assci-25
 ```
 import javax.swing.*;
 import java.awt.*;
@@ -1083,7 +1026,7 @@ class ShapeFrame extends JFrame implements ActionListener {
 ```
 <img width="392" height="278" alt="image" src="https://github.com/user-attachments/assets/83376d8e-3066-4bf5-98a6-0438a17332f0" />
 
-##assci-26
+## assci-26
 ```
 import javax.swing.*;
 import java.awt.*;
@@ -1137,7 +1080,7 @@ public class PaintBrush extends JFrame {
 ```
 <img width="352" height="282" alt="image" src="https://github.com/user-attachments/assets/df7add16-d2d3-4812-b0cf-2eae840d0008" />
 
-##assci-27
+## assci-27
 ```
 import mypack.*;
 public class TestPackage {
@@ -1157,7 +1100,7 @@ public class TestPackage {
 ```
 <img width="118" height="65" alt="image" src="https://github.com/user-attachments/assets/061e384c-8b6a-478c-b8f5-2716073a7da5" />
 
-##assci-28
+## assci-28
 ```
 import mypack.Add;
 import mypack.subpack.Square;
@@ -1171,3 +1114,57 @@ public class TestPackage {
 }
 ```
 <img width="81" height="26" alt="image" src="https://github.com/user-attachments/assets/ef6501f9-b224-4c76-af4a-3a7af992a1b4" />
+
+## assci-29
+```
+public class ExceptionDemo {
+    public static void main(String[] args) {
+        try {
+            int arr[] = new int[5];
+            for(int i = 0; i <= 5; i++) {  
+                arr[i] = i;
+            }
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Error: Index out of bounds!");
+        }
+        try {
+            int a = 10;
+            int b = 0;
+            int result = a / b;   
+        } catch(ArithmeticException e) {
+            System.out.println("Arithmetic Error: Cannot divide by zero!");
+        }
+    }
+}
+```
+<img width="232" height="26" alt="image" src="https://github.com/user-attachments/assets/c7700878-33f7-4926-9e20-609f869a27a9" />
+
+## assci-30
+```
+import java.util.Scanner;
+class AgeException extends Exception {
+    public AgeException(String message) {
+        super(message);
+    }
+}
+public class AgeTest {
+    static void checkAge(int age) throws AgeException {
+        if(age < 18 || age > 60) {
+            throw new AgeException("Invalid Age! Age must be between 18 and 60.");
+        } else {
+            System.out.println("Valid Age ✔");
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Age: ");
+        int age = sc.nextInt();
+        try {
+            checkAge(age);
+        } catch(AgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+```
+<img width="81" height="24" alt="image" src="https://github.com/user-attachments/assets/68c0ca6e-c159-495a-8e24-edab6b93745b" />
