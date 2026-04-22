@@ -1,34 +1,35 @@
-<img width="81" height="24" alt="image" src="https://github.com/user-attachments/assets/bd141cf8-3606-49de-ad5a-32b7de0e9b5e" />[program-1 for calculator ](#code1)
-[program-2 for HelloWorld ](#code2)
-[program-3 for Armstrong ](#code3)
-[program-4 for Distance1 ](#code4)
-[program-5 for Distance2 ](#code5)
-[program-6 for Factorial ](#code6)
-[program-7 for Fibonacci ](#code7)
-[program-8 for Main ](#code8)
-[program-9 for Palindrome ](#code9)
-[program-10 for Pattern ](#code10)
-[program-11 for ReverseArray ](#code11)
-[program-12 for Time1 ](#code12)
-[program-13 for Time2 ](#code13)
-[program-14 for SingleInheritanceDemo ](#code14)
-[program-15 for MultilevelInheritanceDemo ](#code15)
-[program-16 for HierarchicalInheritanceDemo ](#code16)
-[program-17 for CharFileCopy ](#code17)
-[program-18 for ByteFileCopy ](#code18)
-[program-19 for CombinedProgram ](#code19)
-[program-20 for JoinExample ](#code20)
-[program-21 for AddSwing ](#code21)
-[program-22 for RegisterForm ](#code22)
-[program-23 for CalculatorSwing ](#code23)
-[program-24 for MatrixAddition ](#code24)
-[program-25 for ShapeFrame ](#code25)
-[program-26 for PaintBrush ](#code26)
-[program-27 for TestPackage ](#code27)
+[program-1 for calculator ](#code1)
+[program-2 for TestCalculator ](#code2)]
+[program-3 for HelloWorld ](#code3)
+[program-4 for Armstrong ](#code4)
+[program-5 for Distance1 ](#code5)
+[program-6 for Distance2 ](#code6)
+[program-7 for Factorial ](#code7)
+[program-8 for Fibonacci ](#code8)
+[program-9 for Main ](#code9)
+[program-10 for Palindrome ](#code10)
+[program-11 for Pattern ](#code11)
+[program-12 for ReverseArray ](#code12)
+[program-13 for Time1 ](#code13)
+[program-14 for Time2 ](#code14)
+[program-15 for SingleInheritanceDemo ](#code15)
+[program-16 for MultilevelInheritanceDemo ](#code16)
+[program-17 for HierarchicalInheritanceDemo ](#code17)
+[program-18 for CharFileCopy ](#code18)
+[program-19 for ByteFileCopy ](#code19)
+[program-20 for CombinedProgram ](#code20)
+[program-21 for JoinExample ](#code21)
+[program-22 for AddSwing ](#code22)
+[program-23 for RegisterForm ](#code23)
+[program-24 for CalculatorSwing ](#code24)
+[program-25 for MatrixAddition ](#code25)
+[program-26 for ShapeFrame ](#code26)
+[program-27 for PaintBrush ](#code27)
 [program-28 for TestPackage ](#code28)
-[program-29 for ExceptionDemo ](#code29)
-[program-30 for AgeTest ](#code30)
-[program-31 for AllInOneDemo ](#code31)
+[program-29 for TestPackage ](#code29)
+[program-30 for ExceptionDemo ](#code30)
+[program-31 for AgeTest ](#code31)
+[program-32 for AllInOneDemo ](#code32)
 
 ## assci-1
 
@@ -79,6 +80,48 @@ public class calculator {
 <img width="460" height="171" alt="image" src="https://github.com/user-attachments/assets/325a9760-76f6-4275-bd1e-f13b3712e510" />
 
 ## assci-2
+```
+import java.util.Scanner;
+class Calculator {
+    int a, b;
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        b = sc.nextInt();
+    }
+    void add() {
+        System.out.println("Addition: " + (a + b));
+    }
+    void sub() {
+        System.out.println("Subtraction: " + (a - b));
+    }
+    void mul() {
+        System.out.println("Multiplication: " + (a * b));
+    }
+    void div() {
+        if (b == 0) {
+            System.out.println("Division: Cannot divide by zero");
+        } else {
+            System.out.println("Division: " + (a / b));
+        }
+    }
+}
+public class TestCalculator {
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        c.input();
+        c.add();
+        c.sub();
+        c.mul();
+        c.div();
+    }
+}
+```
+<img width="130" height="76" alt="image" src="https://github.com/user-attachments/assets/a0303385-45da-4330-b26c-4395a757f9e8" />
+
+## assci-3
 
 ```
 public class HelloWorld {
@@ -90,7 +133,7 @@ public class HelloWorld {
 <img width="138" height="38" alt="image" src="https://github.com/user-attachments/assets/36572a87-731d-4a6e-b18e-9ab856a6f314" />
 
 
-## assci-3
+## assci-4
 ```
 class Armstrong {
    Armstrong() {
@@ -121,7 +164,7 @@ class Armstrong {
 ```
 <img width="114" height="28" alt="Screenshot 2026-03-12 222509" src="https://github.com/user-attachments/assets/8bbb59fc-5c65-41f9-a639-ee9f5c2a2792" />
 
-## assci-4
+## assci-5
 ```
 class Distance1 {
     int km, m, cm;
@@ -159,7 +202,7 @@ class Distance1 {
 ```
 <img width="187" height="21" alt="Screenshot 2026-03-12 223136" src="https://github.com/user-attachments/assets/46a06249-74b6-4b58-902c-7b7cfd1c9897" />
 
-## assci-5
+## assci-6
 ```
 class Distance2 {
     int m, cm;
@@ -188,7 +231,7 @@ class Distance2 {
 ```
 <img width="164" height="26" alt="image" src="https://github.com/user-attachments/assets/8e302576-fba7-45d5-a372-e72b2facd3fa" />
 
-## assci-6
+## assci-7
 ```
 class Factorial {
     void fact(int n) {
@@ -209,7 +252,7 @@ class Factorial {
 ```
 <img width="179" height="23" alt="Screenshot 2026-03-12 223710" src="https://github.com/user-attachments/assets/8ed3b4d5-4fdb-466c-8a8f-46a77e3f6d63" />
 
-## assci-7
+## assci-8
 ```
 class Fibonacci {
 
@@ -232,7 +275,7 @@ class Fibonacci {
 ```
 <img width="262" height="17" alt="Screenshot 2026-03-12 225430" src="https://github.com/user-attachments/assets/3e00c7ee-2827-4e2f-9fd3-98b93fa2c2c3" />
 
-## assci-8
+## assci-9
 [
 ```
 class Matrix {
@@ -325,7 +368,7 @@ public class Main {
 ```
 <img width="314" height="494" alt="image" src="https://github.com/user-attachments/assets/d92a6697-bf11-44d2-b69b-2eb284999eac" />
 
-## assci-9
+## assci-10
 ```
 class Palindrome {
 
@@ -352,7 +395,7 @@ class Palindrome {
 ```
 <img width="126" height="27" alt="Screenshot 2026-03-12 230028" src="https://github.com/user-attachments/assets/cf2f438c-df8b-434c-9251-eb6c7c2a4124" />
 
-## asssci-10
+## asssci-11
 ```
 class Pattern {
 
@@ -374,7 +417,7 @@ class Pattern {
 ```
 <img width="120" height="126" alt="Screenshot 2026-03-12 230649" src="https://github.com/user-attachments/assets/c26865c0-486f-42cc-833e-d16f52423f8a" />
 
-## assci-11
+## assci-12
 ```
 class ReverseArray {
     void reverse(int arr[]) {
@@ -391,7 +434,7 @@ class ReverseArray {
 ```
 <img width="166" height="24" alt="Screenshot 2026-03-12 231132" src="https://github.com/user-attachments/assets/3848e00c-3ab4-4a1c-86f9-8e4faf9b9032" />
 
-##assci-12
+## assci-13
 ```
 class Time1 {
     int hr, min, sec;
@@ -429,7 +472,7 @@ class Time1 {
 ```
 <img width="220" height="21" alt="Screenshot 2026-03-12 231640" src="https://github.com/user-attachments/assets/04ed1b1f-9e34-4fc4-b07a-75cf8db89e32" />
 
-## assci-13
+## assci-14
 ```
 class Time2 {
     int hr, min;
@@ -465,7 +508,7 @@ class Time2 {
 ```
 <img width="199" height="21" alt="Screenshot 2026-03-12 232235" src="https://github.com/user-attachments/assets/a5465b3c-a719-4518-a0c2-ea3b0eb0cec1" />
 
-## assci-14
+## assci-15
 ```
 class Animal1 {
     void eat() {
@@ -489,7 +532,7 @@ public class SingleInheritanceDemo {
 ```
 <img width="199" height="44" alt="Screenshot 2026-03-12 233147" src="https://github.com/user-attachments/assets/d0b9156c-94db-4b51-952a-76904d177d93" />
 
-## assci-15
+## assci-16
 ```
 class Animal2 {
     void eat() {
@@ -520,7 +563,7 @@ public class MultilevelInheritanceDemo {
 ```
 <img width="193" height="83" alt="Screenshot 2026-03-12 233611" src="https://github.com/user-attachments/assets/5421b7e0-4c73-4ed6-bb50-ab04e50ab0ca" />
 
-## assci-16
+## assci-17
 ```
 class Animal3 {
     void eat() {
@@ -555,7 +598,7 @@ public class HierarchicalInheritanceDemo {
 ```
 <img width="136" height="105" alt="Screenshot 2026-03-12 233911" src="https://github.com/user-attachments/assets/8237048e-e645-4f68-bd53-e76c6e939231" />
 
-## assci-17
+## assci-18
 ```
 import java.io.*;
 public class CharFileCopy {
@@ -578,7 +621,7 @@ public class CharFileCopy {
 ```
 <img width="193" height="12" alt="image" src="https://github.com/user-attachments/assets/5527a848-4fe8-433e-96c8-0810663c527b" />
 
-## assci-18
+## assci-19
 ```
 import java.io.*;
 
@@ -606,7 +649,7 @@ public class ByteFileCopy {
 ```
 <img width="167" height="13" alt="image" src="https://github.com/user-attachments/assets/f7442230-8f2d-4e77-a6b5-fc64be7f143f" />
 
-## assci-19
+## assci-20
 ```
 class A extends Thread implements Runnable {
     public void run() {
@@ -679,7 +722,7 @@ public class CombinedProgram {
 ```
 <img width="139" height="401" alt="image" src="https://github.com/user-attachments/assets/a0df1c20-fa98-4c39-baa7-d4bdbe4924f3" />
 
-## assci-20
+## assci-21
 ```
 class A extends Thread {
     public void run() {
@@ -714,7 +757,7 @@ public class JoinExample {
 ```
 <img width="39" height="194" alt="image" src="https://github.com/user-attachments/assets/6c5f2fe2-a6cb-4180-ba5d-a550be26faa7" />
 
-## assci-21
+## assci-22
 ```
 import javax.swing.*;
 import java.awt.event.*;
@@ -755,7 +798,7 @@ public class AddSwing {
 ```
 <img width="242" height="211" alt="image" src="https://github.com/user-attachments/assets/737be681-57c5-4e72-b1ff-21c05656523b" />
 
-## assci-22
+## assci-23
 ```
 import javax.swing.*;
 import java.awt.event.*;
@@ -825,7 +868,7 @@ public class RegisterForm {
 ```
 <img width="317" height="400" alt="image" src="https://github.com/user-attachments/assets/e07ca2aa-ebb4-4e25-9be6-40af4c6b314c" />
 
-## assci-23
+## assci-24
 ```
 import javax.swing.*;
 public class CalculatorSwing {
@@ -907,7 +950,7 @@ public class CalculatorSwing {
 ```
 <img width="219" height="246" alt="image" src="https://github.com/user-attachments/assets/67ce69e3-b31b-4747-a60a-557b73dddad9" />
 
-##  assci-24
+##  assci-25
 ```
 import javax.swing.*;
 import java.awt.event.*;
@@ -973,7 +1016,7 @@ public class MatrixAddition {
 ```
 <img width="314" height="197" alt="image" src="https://github.com/user-attachments/assets/f18c39d7-4dd8-469f-850d-25e526dc1b94" />
 
-## assci-25
+## assci-26
 ```
 import javax.swing.*;
 import java.awt.*;
@@ -1028,7 +1071,7 @@ class ShapeFrame extends JFrame implements ActionListener {
 ```
 <img width="392" height="278" alt="image" src="https://github.com/user-attachments/assets/83376d8e-3066-4bf5-98a6-0438a17332f0" />
 
-## assci-26
+## assci-27
 ```
 import javax.swing.*;
 import java.awt.*;
@@ -1082,7 +1125,7 @@ public class PaintBrush extends JFrame {
 ```
 <img width="352" height="282" alt="image" src="https://github.com/user-attachments/assets/df7add16-d2d3-4812-b0cf-2eae840d0008" />
 
-## assci-27
+## assci-28
 ```
 import mypack.*;
 public class TestPackage {
@@ -1102,7 +1145,7 @@ public class TestPackage {
 ```
 <img width="118" height="65" alt="image" src="https://github.com/user-attachments/assets/061e384c-8b6a-478c-b8f5-2716073a7da5" />
 
-## assci-28
+## assci-29
 ```
 import mypack.Add;
 import mypack.subpack.Square;
@@ -1117,7 +1160,7 @@ public class TestPackage {
 ```
 <img width="81" height="26" alt="image" src="https://github.com/user-attachments/assets/ef6501f9-b224-4c76-af4a-3a7af992a1b4" />
 
-## assci-29
+## assci-30
 ```
 public class ExceptionDemo {
     public static void main(String[] args) {
@@ -1141,7 +1184,7 @@ public class ExceptionDemo {
 ```
 <img width="232" height="26" alt="image" src="https://github.com/user-attachments/assets/c7700878-33f7-4926-9e20-609f869a27a9" />
 
-## assci-30
+## assci-31
 ```
 import java.util.Scanner;
 class AgeException extends Exception {
@@ -1171,7 +1214,7 @@ public class AgeTest {
 ```
 <img width="81" height="24" alt="image" src="https://github.com/user-attachments/assets/68c0ca6e-c159-495a-8e24-edab6b93745b" />
 
-## assci-31
+## assci-32
 ```
 interface Shape {
     void area();
