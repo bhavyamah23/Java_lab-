@@ -14,6 +14,8 @@
 [program-14 for SingleInheritanceDemo ](#code14)
 [program-15 for MultilevelInheritanceDemo ](#code15)
 [program-16 for HierarchicalInheritanceDemo ](#code16)
+[program-17 for CharFileCopy ](#code17)
+[program-18 for ByteFileCopy ](#code18)
 ## assci-1
 
 ```
@@ -545,3 +547,56 @@ public class HierarchicalInheritanceDemo {
 }
 ```
 <img width="136" height="105" alt="Screenshot 2026-03-12 233911" src="https://github.com/user-attachments/assets/8237048e-e645-4f68-bd53-e76c6e939231" />
+
+##assci-17
+```
+import java.io.*;
+public class CharFileCopy {
+    public static void main(String[] args) {
+        try {
+            FileReader fr = new FileReader("source.txt");
+            FileWriter fw = new FileWriter("dest_char.txt");
+            int ch;
+            while ((ch = fr.read()) != -1) {
+                fw.write(ch);
+            }
+            fr.close();
+            fw.close();
+            System.out.println("File copied using character stream");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+<img width="193" height="12" alt="image" src="https://github.com/user-attachments/assets/5527a848-4fe8-433e-96c8-0810663c527b" />
+
+##assci-18
+```
+import java.io.*;
+
+public class ByteFileCopy {
+    public static void main(String[] args) {
+        try {
+            FileInputStream fis = new FileInputStream("source.txt");
+            FileOutputStream fos = new FileOutputStream("dest_byte.txt");
+
+            int b;
+
+            while ((b = fis.read()) != -1) {
+                fos.write(b);
+            }
+
+            fis.close();
+            fos.close();
+
+            System.out.println("File copied using byte stream");
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+<img width="167" height="13" alt="image" src="https://github.com/user-attachments/assets/f7442230-8f2d-4e77-a6b5-fc64be7f143f" />
+
+
