@@ -1,4 +1,4 @@
-[program-1 for calculator ](#code1)
+<img width="81" height="24" alt="image" src="https://github.com/user-attachments/assets/bd141cf8-3606-49de-ad5a-32b7de0e9b5e" />[program-1 for calculator ](#code1)
 [program-2 for HelloWorld ](#code2)
 [program-3 for Armstrong ](#code3)
 [program-4 for Distance1 ](#code4)
@@ -28,6 +28,8 @@
 [program-28 for TestPackage ](#code28)
 [program-29 for ExceptionDemo ](#code29)
 [program-30 for AgeTest ](#code30)
+[program-31 for AllInOneDemo ](#code31)
+
 ## assci-1
 
 ```
@@ -1168,3 +1170,50 @@ public class AgeTest {
 }
 ```
 <img width="81" height="24" alt="image" src="https://github.com/user-attachments/assets/68c0ca6e-c159-495a-8e24-edab6b93745b" />
+
+## assci-31
+```
+interface Shape {
+    void area();
+}
+abstract class Vehicle {
+    abstract void start();
+    void fuel() {
+        System.out.println("Fuel is required");
+    }
+}
+class Animal {
+    void eat() {
+        System.out.println("Eating...");
+    }
+}
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking...");
+    }
+}
+class Circle implements Shape {
+    public void area() {
+        int r = 5;
+        System.out.println("Circle Area = " + (3.14 * r * r));
+    }
+}
+class Car extends Vehicle {
+    void start() {
+        System.out.println("Car starts with key");
+    }
+}
+public class AllInOneDemo {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+        Shape s = new Circle();
+        s.area();
+        Vehicle v = new Car();
+        v.start();
+        v.fuel();
+    }
+}
+```
+<img width="115" height="65" alt="image" src="https://github.com/user-attachments/assets/ca569d3e-7f5e-4b47-b71b-e732ac425d5e" />
