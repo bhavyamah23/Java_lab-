@@ -30,7 +30,7 @@
 [program-30 for ExceptionDemo ](#code30)
 [program-31 for AgeTest ](#code31)
 [program-32 for AllInOneDemo ](#code32)
-
+[program-33 for TestArray ](#code33)
 ## assci-1
 
 ```
@@ -1260,3 +1260,49 @@ public class AllInOneDemo {
 }
 ```
 <img width="115" height="65" alt="image" src="https://github.com/user-attachments/assets/ca569d3e-7f5e-4b47-b71b-e732ac425d5e" />
+
+## assci-33
+```
+import java.util.Scanner;
+class ArrayDemo {
+    int arr[] = new int[5];
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 5 elements:");
+        for(int i = 0; i < 5; i++) {
+            arr[i] = sc.nextInt();
+        }
+    }
+    void output1() {
+        System.out.println("Array Elements:");
+        for(int i = 0; i < 5; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    void output2() {
+        System.out.println("Array using for-each:");
+        for(int x : arr) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+    void reverse() {
+        System.out.println("Reverse Array:");
+        for(int i = 4; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
+public class TestArray {
+    public static void main(String[] args) {
+        ArrayDemo a = new ArrayDemo();
+        a.input();
+        a.output1();
+        a.output2();
+        a.reverse();
+    }
+}
+```
+<img width="126" height="103" alt="image" src="https://github.com/user-attachments/assets/c688abf3-665a-4d36-aba3-5ecc53155edf" />
