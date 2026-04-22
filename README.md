@@ -22,6 +22,10 @@
 [program-22 for RegisterForm ](#code22)
 [program-23 for CalculatorSwing ](#code23)
 [program-24 for MatrixAddition ](#code24)
+[program-25 for ShapeFrame ](#code25)
+[program-26 for PaintBrush ](#code26)
+[program-27 for TestPackage ](#code27)
+[program-28 for TestPackage ](#code28)
 ## assci-1
 
 ```
@@ -1023,3 +1027,147 @@ public class MatrixAddition {
 }
 ```
 <img width="314" height="197" alt="image" src="https://github.com/user-attachments/assets/f18c39d7-4dd8-469f-850d-25e526dc1b94" />
+
+##assci-25
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+class ShapeFrame extends JFrame implements ActionListener {
+    String shape = "";
+    public ShapeFrame() {
+        setTitle("Shape Drawer");
+        String names[] = {"Circle","Oval","Rectangle","Square","Line",
+                          "Arc","RoundRect","3DRect","FillOval","FillRect"};
+        for(int i=0;i<10;i++) {
+            JButton b = new JButton(names[i]);
+            b.setBounds(20 + (i%5)*100, 20 + (i/5)*50, 90, 30);
+            b.addActionListener(this);
+            add(b);
+        }
+        setSize(550,400);
+        setLayout(null);
+        setVisible(true);
+    }
+    public void actionPerformed(ActionEvent e) {
+        shape = e.getActionCommand();
+        repaint(); // redraw
+    }
+    public void paint(Graphics g) {
+        super.paint(g);
+        if(shape.equals("Circle"))
+            g.drawOval(200,150,100,100);
+        else if(shape.equals("Oval"))
+            g.drawOval(200,150,150,100);
+        else if(shape.equals("Rectangle"))
+            g.drawRect(200,150,150,100);
+        else if(shape.equals("Square"))
+            g.drawRect(200,150,100,100);
+        else if(shape.equals("Line"))
+            g.drawLine(200,150,350,250);
+        else if(shape.equals("Arc"))
+            g.drawArc(200,150,150,100,0,180);
+        else if(shape.equals("RoundRect"))
+            g.drawRoundRect(200,150,150,100,30,30);
+        else if(shape.equals("3DRect"))
+            g.draw3DRect(200,150,150,100,true);
+        else if(shape.equals("FillOval"))
+            g.fillOval(200,150,150,100);
+        else if(shape.equals("FillRect"))
+            g.fillRect(200,150,150,100);
+    }
+    public static void main(String[] args) {
+        new ShapeFrame();
+    }
+}
+```
+<img width="392" height="278" alt="image" src="https://github.com/user-attachments/assets/83376d8e-3066-4bf5-98a6-0438a17332f0" />
+
+##assci-26
+```
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class PaintBrush extends JFrame {
+    int x1, y1, x2, y2;
+    Color color = Color.BLACK;
+    int width = 2;
+    public PaintBrush() {
+        setTitle("Paint Brush");
+        JButton red = new JButton("Red");
+        JButton blue = new JButton("Blue");
+        JButton green = new JButton("Green");
+        Integer sizes[] = {2,4,6,8,10};
+        JComboBox cb = new JComboBox(sizes);
+        red.setBounds(20,40,70,30);
+        blue.setBounds(100,40,70,30);
+        green.setBounds(180,40,80,30);
+        cb.setBounds(280,40,70,30);
+        add(red); add(blue); add(green); add(cb);
+        red.addActionListener(e -> color = Color.RED);
+        blue.addActionListener(e -> color = Color.BLUE);
+        green.addActionListener(e -> color = Color.GREEN);
+        cb.addActionListener(e -> width = (int)cb.getSelectedItem());
+        addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseDragged(MouseEvent e) {
+                x2 = e.getX();
+                y2 = e.getY();
+                Graphics g = getGraphics();
+                g.setColor(color);
+                ((Graphics2D)g).setStroke(new BasicStroke(width));
+                g.drawLine(x1, y1, x2, y2);
+                x1 = x2;
+                y1 = y2;
+            }
+        });
+        addMouseListener(new MouseAdapter() {
+            public void mousePressed(MouseEvent e) {
+                x1 = e.getX();
+                y1 = e.getY();
+            }
+        });
+        setSize(500,400);
+        setLayout(null);
+        setVisible(true);
+    }
+    public static void main(String[] args) {
+        new PaintBrush();
+    }
+}
+```
+<img width="352" height="282" alt="image" src="https://github.com/user-attachments/assets/df7add16-d2d3-4812-b0cf-2eae840d0008" />
+
+##assci-27
+```
+import mypack.*;
+public class TestPackage {
+    public static void main(String[] args) {
+        Add a = new Add();
+        Sub s = new Sub();
+        Mul m = new Mul();
+        Div d = new Div();
+        Square sq = new Square();
+        System.out.println("Addition: " + a.add(10,5));
+        System.out.println("Subtraction: " + s.sub(10,5));
+        System.out.println("Multiplication: " + m.mul(10,5));
+        System.out.println("Division: " + d.div(10,5));
+        System.out.println("Square: " + sq.square(5));
+    }
+}
+```
+<img width="118" height="65" alt="image" src="https://github.com/user-attachments/assets/061e384c-8b6a-478c-b8f5-2716073a7da5" />
+
+##assci-28
+```
+import mypack.Add;
+import mypack.subpack.Square;
+public class TestPackage {
+    public static void main(String[] args) {
+        Add a = new Add();
+        Square s = new Square();
+        System.out.println("Addition: " + a.add(10,5));
+        System.out.println("Square: " + s.square(5));
+    }
+}
+```
+<img width="81" height="26" alt="image" src="https://github.com/user-attachments/assets/ef6501f9-b224-4c76-af4a-3a7af992a1b4" />
