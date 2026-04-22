@@ -16,6 +16,10 @@
 [program-16 for HierarchicalInheritanceDemo ](#code16)
 [program-17 for CharFileCopy ](#code17)
 [program-18 for ByteFileCopy ](#code18)
+[program-19 for CombinedProgram ](#code19)
+[program-20 for JoinExample ](#code20)
+[program-21 for AddSwing ](#code21)
+[program-22 for RegisterForm ](#code22)
 ## assci-1
 
 ```
@@ -599,4 +603,208 @@ public class ByteFileCopy {
 ```
 <img width="167" height="13" alt="image" src="https://github.com/user-attachments/assets/f7442230-8f2d-4e77-a6b5-fc64be7f143f" />
 
+##assci-19
+```
+class A extends Thread implements Runnable {
+    public void run() {
+        for(int i=1; i<=100; i++) {
+            System.out.println(Thread.currentThread().getName() + ": " + i);
+        }
+    }
+    void print() {
+        for(int i=1; i<=100; i++) {
+            System.out.println("A (No Thread): " + i);
+        }
+    }
+}
+class B extends Thread implements Runnable {
+    public void run() {
+        for(int i=1; i<=100; i++) {
+            System.out.println(Thread.currentThread().getName() + ": " + i);
+        }
+    }
+    void print() {
+        for(int i=1; i<=100; i++) {
+            System.out.println("B (No Thread): " + i);
+        }
+    }
+}
+class C extends Thread implements Runnable {
+    public void run() {
+        for(int i=1; i<=100; i++) {
+            System.out.println(Thread.currentThread().getName() + ": " + i);
+        }
+    }
+    void print() {
+        for(int i=1; i<=100; i++) {
+            System.out.println("C (No Thread): " + i);
+        }
+    }
+}
+public class CombinedProgram {
+    public static void main(String[] args) {
+        A a = new A();
+        B b = new B();
+        C c = new C();
+        System.out.println("---- Without Thread ----");
+        a.print();
+        b.print();
+        c.print();
+        System.out.println("---- Using Thread ----");
+        a.setName("Thread-A");
+        b.setName("Thread-B");
+        c.setName("Thread-C");
+        a.start();
+        b.start();
+        c.start();
+        try {
+            a.join();
+            b.join();
+            c.join();
+        } catch(Exception e) {}
+        System.out.println("---- Using Runnable ----");
 
+        Thread t1 = new Thread(new A(), "Runnable-A");
+        Thread t2 = new Thread(new B(), "Runnable-B");
+        Thread t3 = new Thread(new C(), "Runnable-C");
+
+        t1.start();
+        t2.start();
+        t3.start();
+    }
+}
+```
+<img width="139" height="401" alt="image" src="https://github.com/user-attachments/assets/a0df1c20-fa98-4c39-baa7-d4bdbe4924f3" />
+
+##assci-20
+```
+class A extends Thread {
+    public void run() {
+        for(int i=1;i<=5;i++)
+            System.out.println("A: " + i);
+    }
+}
+class B extends Thread {
+    public void run() {
+        for(int i=1;i<=5;i++)
+            System.out.println("B: " + i);
+    }
+}
+class C extends Thread {
+    public void run() {
+        for(int i=1;i<=5;i++)
+            System.out.println("C: " + i);
+    }
+}
+public class JoinExample {
+    public static void main(String[] args) throws Exception {
+        A t1 = new A();
+        B t2 = new B();
+        C t3 = new C();
+        t1.start();
+        t1.join();  
+        t2.start();
+        t2.join();   
+        t3.start();
+    }
+}
+```
+<img width="39" height="194" alt="image" src="https://github.com/user-attachments/assets/6c5f2fe2-a6cb-4180-ba5d-a550be26faa7" />
+
+##assci-21
+```
+import javax.swing.*;
+import java.awt.event.*;
+public class AddSwing {
+    public static void main(String[] args) {
+        JFrame f = new JFrame("Addition");
+        JLabel l1 = new JLabel("First Number:");
+        JLabel l2 = new JLabel("Second Number:");
+        JLabel l3 = new JLabel("Result:");
+        JTextField t1 = new JTextField();
+        JTextField t2 = new JTextField();
+        JTextField t3 = new JTextField();
+        JButton b = new JButton("Add");
+        l1.setBounds(50,30,120,30);
+        t1.setBounds(180,30,120,30);
+        l2.setBounds(50,80,120,30);
+        t2.setBounds(180,80,120,30);
+        l3.setBounds(50,130,120,30);
+        t3.setBounds(180,130,120,30);
+        b.setBounds(120,180,100,30);
+        f.add(l1); f.add(t1);
+        f.add(l2); f.add(t2);
+        f.add(l3); f.add(t3);
+        f.add(b);
+        b.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                int a = Integer.parseInt(t1.getText());
+                int b = Integer.parseInt(t2.getText());
+                int c = a + b;
+                t3.setText(String.valueOf(c));
+            }
+        });
+        f.setSize(350,300);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+}
+```
+<img width="242" height="211" alt="image" src="https://github.com/user-attachments/assets/737be681-57c5-4e72-b1ff-21c05656523b" />
+
+##assci-22
+```
+import javax.swing.*;
+import java.awt.event.*;
+import java.sql.*;
+public class RegisterForm {
+    public static void main(String[] args) {
+        JFrame f = new JFrame("Registration Form");
+        JLabel l1 = new JLabel("Name:");
+        JLabel l2 = new JLabel("Email:");
+        JLabel l3 = new JLabel("Phone:");
+        JTextField t1 = new JTextField();
+        JTextField t2 = new JTextField();
+        JTextField t3 = new JTextField();
+        JButton b = new JButton("Submit");
+        l1.setBounds(50,50,100,30);
+        t1.setBounds(150,50,150,30);
+        l2.setBounds(50,100,100,30);
+        t2.setBounds(150,100,150,30);
+        l3.setBounds(50,150,100,30);
+        t3.setBounds(150,150,150,30);
+        b.setBounds(120,200,100,30);
+        f.add(l1); f.add(t1);
+        f.add(l2); f.add(t2);
+        f.add(l3); f.add(t3);
+        f.add(b);
+        b.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Class.forName("oracle.jdbc.driver.OracleDriver");
+                    Connection con = DriverManager.getConnection(
+                        "jdbc:oracle:thin:@localhost:1521:xe",
+                        "system",
+                        "OraSecure2026"
+                    );
+                    PreparedStatement ps = con.prepareStatement(
+                        "insert into student values(?,?,?)"
+                    );
+                    ps.setString(1, t1.getText());
+                    ps.setString(2, t2.getText());
+                    ps.setString(3, t3.getText());
+                    ps.executeUpdate();
+                    JOptionPane.showMessageDialog(f, "Data Inserted Successfully");
+                    con.close();
+                } catch(Exception ex) {
+                    System.out.println(ex);
+                }
+            }
+        });
+        f.setSize(350,300);
+        f.setLayout(null);
+        f.setVisible(true);
+    }
+}
+```
+<img width="243" height="216" alt="image" src="https://github.com/user-attachments/assets/2f35bb98-bfdf-421b-9d0a-b2667fbeffe7" />
